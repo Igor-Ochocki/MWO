@@ -10,7 +10,7 @@ requirement Weryfikacja_taryf {
 requirement Błąd_połączenia {
 }
 
-biletomat - traces -> Dostarczanie_listy_dostępnych_biletów
+system_biletowy - traces -> Dostarczanie_listy_dostępnych_biletów
 
 Dostarczanie_listy_dostępnych_biletów - contains -> Weryfikacja_taryf
 Dostarczanie_listy_dostępnych_biletów <- refines - Błąd_połączenia
