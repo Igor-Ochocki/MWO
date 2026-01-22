@@ -1,7 +1,7 @@
 ```mermaid
 sequenceDiagram
+     participant A as Administrator systemu
     participant S as System biletowy
-    participant A as Administrator systemu
     participant B as Baza danych
     participant Bil as Biletomat
 
@@ -13,6 +13,7 @@ sequenceDiagram
     end
     S ->> B: Przeslij dane nowej taryfy
     B -->> S: OK
-    B ->> Bil: Zaktualizuj taryfe(nowa taryfa)
-    Bil ->> B: OK
+    S ->> Bil: Zaktualizuj taryfe(nowa taryfa)
+    Bil ->> S: OK
+    S -->> A: OK
 ```
