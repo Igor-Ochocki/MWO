@@ -9,11 +9,12 @@ sequenceDiagram
     S ->> S: Weryfikacja poprawnosci danych
     loop Dopoki dane sa niepoprawne
         S -->> A: Popros o nowe dane
+        A ->> S: dodaj dane nowej taryfy(nowa taryfa)
         S ->> S: Weryfikacja poprawnosci danych
     end
     S ->> B: Przeslij dane nowej taryfy
     B -->> S: OK
     S ->> Bil: Zaktualizuj taryfe(nowa taryfa)
-    Bil ->> S: OK
+    Bil -->> S: OK
     S -->> A: OK
 ```
