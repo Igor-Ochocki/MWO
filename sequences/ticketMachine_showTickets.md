@@ -11,6 +11,7 @@ sequenceDiagram
     alt Dane pobrane poprawnie
         S-->>E: Zwróć listę biletów i taryf
         E->>E: Wyświetl kategorie biletów (np. Czasowe, Jednorazowe)
+        E-->>U: 
         
         U->>E: Wybierz kategorię biletu
         E->>E: Wyświetl szczegóły biletów dla kategorii
@@ -18,8 +19,11 @@ sequenceDiagram
     else Awaria sieci / Timeout
         S-->>E: Błąd połączenia / Brak odpowiedzi
         E->>E: Wyświetl komunikat o błędzie pobierania
+        E-->>U: 
         
         U->>E: Zatwierdź błąd (przycisk "OK")
         E->>E: Powrót do ekranu startowego
     end
+
+    E-->>U: 
 ```
