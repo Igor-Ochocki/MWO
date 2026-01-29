@@ -24,11 +24,11 @@ classDiagram
     }
 
     class SystemCentralny {
-        +wyslijZapytanieOListeBiletow(): listaBiletow
+        +wyslijZapytanieOListeKategorii() listaKategorii
     }
 
     Biletomat --> SystemCentralny : odpytuje
     EkranDotykowy --* Biletomat : jestCzescia
-    BazaDanych ..> Kategoria : przechowuje
     Biletomat ..> Kategoria : przetwarza
+    SystemCentralny ..> Kategoria : zwraca
 ```
